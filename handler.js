@@ -3,13 +3,13 @@
 module.exports.hello = async (event, context) => {
 
   // GET Request Handler
-
+  // https://ld1smpeg50.execute-api.us-east-1.amazonaws.com/dev/users?name=Rohito
   if(event.queryStringParameters){
     return  {
       statusCode:200,
-      body: JSON.stringify({
-        message: `Wassssup ${event.queryStringParameters.name}! Serverless Architecture!`
-      })
+      body: JSON.stringify(
+         `Wassssup ${event.queryStringParameters.name}! Serverless Architecture!`
+      )
     }
   }
 
@@ -24,6 +24,7 @@ module.exports.hello = async (event, context) => {
     }
   }
   else{
+    console.log({event})
     return {
       statusCode:404,
       body: JSON.stringify({
