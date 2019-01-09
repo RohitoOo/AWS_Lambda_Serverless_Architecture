@@ -73,10 +73,7 @@ functions:
           method: GET
       - http: 
           path: developers/create
-          method: POST
-      - http:
-          path: testers
-          method: GET            
+          method: POST          
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
 #      - sns: greeter-topic
